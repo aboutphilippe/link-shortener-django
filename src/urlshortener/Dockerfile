@@ -1,13 +1,13 @@
 FROM python:3.9
 
 
-RUN mkdir /code
-WORKDIR /code
+RUN mkdir /app
+WORKDIR /app
 RUN pip install --upgrade pip
-COPY requirements.txt /code/
+COPY requirements.txt /app/
 
 RUN pip install -r requirements.txt
-COPY . /code/
+COPY . /app/
 
 EXPOSE 8000
 
